@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="core">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/forester-lgpl-1.005-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/freeloader.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/itext.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/pdf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/phylowidget.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/forester-lgpl-1.005-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

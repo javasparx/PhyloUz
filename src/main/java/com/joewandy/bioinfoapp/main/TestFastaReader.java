@@ -51,7 +51,7 @@ public class TestFastaReader {
                 + "GCTGAGGCAGGAGAATCGCTTGAACCCGGGAGGCGGAGGTTGCGGTGAGCCGAGATCGCG\n"
                 + "CCATTGCACTCCAGCCTGGGCAACAAGAGCGAAACTCCGTCTCAAAAAAAA";
 
-        InputStream stream = null;
+        InputStream stream;
         try {
 
             // get sequences as byte array input stream
@@ -101,6 +101,8 @@ public class TestFastaReader {
             );
 
             treeConstructor.process();
+
+            treeConstructor.outputPhylipDistances("out/matrix2.txt");
 
             String newick = treeConstructor.getNewickString(true, true);
             System.out.println(newick);

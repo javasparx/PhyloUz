@@ -1,0 +1,3 @@
+HSU14574 ***ALU WARNING: Human Alu-Sx subfamily consensus sequence. 0.00000 1.37457 3.09278
+HSU14573 ***ALU WARNING: Human Alu-Sq subfamily consensus sequence. 1.37457 0.00000 3.09278
+HSU14572 ***ALU WARNING: Human Alu-Sp subfamily consensus sequence. 3.09278 3.09278 0.00000
