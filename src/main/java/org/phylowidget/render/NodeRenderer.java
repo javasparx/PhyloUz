@@ -365,7 +365,7 @@ public final class NodeRenderer implements UsefulConstants {
             if (p == null)
                 return;
             /*
-			 * Keep in mind that p may be null (in the case of root node).
+             * Keep in mind that p may be null (in the case of root node).
 			 */
             float weight = nodeStroke(r, c);
             //		weight = 1;

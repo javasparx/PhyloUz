@@ -92,7 +92,7 @@ public class RenderOutput {
                 PhyloWidget.trees.update();
                 rect = TreeManager.cameraRect;
             }
-			/*
+            /*
 			 * Do the rendering!
 			 */
             r.render(canvas, rect.x, rect.y, rect.width, rect.height, true);

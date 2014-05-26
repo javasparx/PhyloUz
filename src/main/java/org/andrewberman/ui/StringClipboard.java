@@ -33,9 +33,9 @@ import java.io.IOException;
  * of trees and subtrees (for PhyloWidget).
  *
  * @author Greg
- * @see        java.awt.datatransfer.Clipboard
- * @see        java.awt.datatransfer.ClipboardOwner
- * @see        SecurityManager
+ * @see java.awt.datatransfer.Clipboard
+ * @see java.awt.datatransfer.ClipboardOwner
+ * @see SecurityManager
  */
 public class StringClipboard implements ClipboardOwner {
     public static StringClipboard instance;
@@ -49,7 +49,7 @@ public class StringClipboard implements ClipboardOwner {
 
     private StringClipboard() {
         /*
-		 * Check security to see if we can latch onto the system clipboard.
+         * Check security to see if we can latch onto the system clipboard.
 		 */
         SecurityManager security = System.getSecurityManager();
         boolean useSystem = false;

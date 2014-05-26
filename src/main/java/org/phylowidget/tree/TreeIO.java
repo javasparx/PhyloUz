@@ -84,7 +84,6 @@ public class TreeIO {
         }
 
 
-
         if (isNexus) {
             String newickFromNexus = getNewickFromNexus(buff.toString());
             //			System.out.println(newickFromNexus);
@@ -130,7 +129,7 @@ public class TreeIO {
             System.out.println(System.currentTimeMillis() + "\tStarting parse...");
         DefaultVertex root = null;
         /*
-		 * See if this String is a valid URL... if it is, then load up the resource!
+         * See if this String is a valid URL... if it is, then load up the resource!
 		 * 
 		 *  Some good Nexus test files online here:
 		 *  http://www.molevol.org/camel/projects/nexus/NEXUS/

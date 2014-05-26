@@ -90,7 +90,7 @@ public class TreeClipboard {
     PhyloTree loadClip() {
         if (newickString == null || newickString.length() == 0) {
             /*
-			 * Try loading a tree from the system clipboard.
+             * Try loading a tree from the system clipboard.
 			 */
             newickString = StringClipboard.instance.fromClipboard();
         }

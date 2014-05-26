@@ -26,8 +26,8 @@ package org.andrewberman.ui.menu;
  * class for more info; particularly the <code>setState()</code> method.
  *
  * @author Greg
- * @see        MenuItem
- * @see        org.andrewberman.ui.Blinker
+ * @see MenuItem
+ * @see org.andrewberman.ui.Blinker
  */
 public final class MenuTimer extends Thread {
     public MenuItem item;

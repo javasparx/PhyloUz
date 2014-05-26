@@ -60,7 +60,7 @@ public class OverlapDetector {
                 i--;
             } else if (hitSomething) {
                 /*
-				 * If we already hit something and now don't intersect, then we must be finished.
+                 * If we already hit something and now don't intersect, then we must be finished.
 				 */
                 break;
             }

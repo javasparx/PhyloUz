@@ -49,7 +49,7 @@ public class UIRectangle extends Rectangle2D.Float {
         float width = (float) r.getWidth();
         float height = (float) r.getHeight();
         /*
-		 * First, look for the "easy" case where we can do a straight subtraction.
+         * First, look for the "easy" case where we can do a straight subtraction.
 		 */
         if (px >= x && px <= x + width && py <= y)
             return y - py;

@@ -69,7 +69,7 @@ public class Zoom extends Tool {
         }
         if (zoomTween.isTweening()) {
             /*
-			 * Update the new center point and set it. This calculation gets a
+             * Update the new center point and set it. This calculation gets a
 			 * little annoying; just trust me here.
 			 */
             double dx = targetX / downZoom;

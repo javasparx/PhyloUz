@@ -147,7 +147,7 @@ public class BkTreeEditDist {
         int totalSeqs = 1 + noOfLoadedSeqs;
 
 		/*
-		 * The maximum possible differences between the length of selected query
+         * The maximum possible differences between the length of selected query
 		 * sequence to the maximum length of an element found in the ALU
 		 * sequences. This number is also used as the no. of iterations when
 		 * querying the BK-Tree (from 0 .. maxDiff) in the queryBkTree static

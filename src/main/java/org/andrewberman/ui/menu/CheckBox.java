@@ -123,7 +123,7 @@ public class CheckBox extends MenuItem {
                 MenuUtils.drawSingleGradientRect(this, curX, y + nOffsetY, nWidth, nHeight, 0);
         }
         /*
-		 * update the "value" object using Reflection.
+         * update the "value" object using Reflection.
 		 */
         try {
             if (field != null)

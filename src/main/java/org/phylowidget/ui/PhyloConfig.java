@@ -91,7 +91,7 @@ public class PhyloConfig {
      *   								to switch between tools.
      *   - "toolbar-hidden.xml"			Same idea as above, but with the toolbar.
      */
-    public String menus = "full.xml;";
+    public String menus = "uz.xml;";
 
     /* Colors: You can modify the foreground and background colors which PhyloWidget uses.
      * The new value should be formatted as below; a triplet of integer RGB values enclosed in parentheses.
@@ -109,7 +109,7 @@ public class PhyloConfig {
      *   - "triangle"
      *   - "x" (star shape)
      */
-    public String nodeShape = "circle";
+    public String nodeShape = "square";
 
     /*
      * How to handle the angles of rotated nodes. usable values:
@@ -171,7 +171,7 @@ public class PhyloConfig {
     public boolean colorBootstrap = true; // ANNOTATIONS: ditto for bootstrap values.
 
 	/*
-	 *
+     *
 	 * END: URL API Configuration
 	 * 
 	 * The rest is all just code involved in making these configuration parameters work properly...
@@ -253,7 +253,7 @@ public class PhyloConfig {
     }
 
 	/*
-	 * END COLOR CRAP
+     * END COLOR CRAP
 	 */
 
     public void setRespondToMouseWheel(boolean respond) {

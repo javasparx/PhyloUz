@@ -92,7 +92,7 @@ public class RectMover extends MovableCamera {
 
     public void update() {
         /*
-		 * No super.update() because we're updating all the necessary tweens on our own.
+         * No super.update() because we're updating all the necessary tweens on our own.
 		 */
         super.scroll();
 

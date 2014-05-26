@@ -82,7 +82,7 @@ public class RadialMenu extends Menu {
 
     public MenuItem create(String s) {
         /*
-		 * Attempt to automatically find a good hint character to use with the
+         * Attempt to automatically find a good hint character to use with the
 		 * new RadialMenuItem
 		 */
         boolean foundGoodChar = false;

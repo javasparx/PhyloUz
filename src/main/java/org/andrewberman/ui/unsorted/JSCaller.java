@@ -46,7 +46,7 @@ public class JSCaller {
 
     private void initialize() {
         /*
-		 * If we've already got the jsObject, then we're already initialized.
+         * If we've already got the jsObject, then we're already initialized.
 		 */
         if (!reflectionWorking) {
             throw new RuntimeException("Reflection not working!");

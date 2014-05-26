@@ -82,7 +82,7 @@ public final class EventManager implements MouseListener, MouseMotionListener,
             p.addKeyListener(this);
         }
         /*
-		 * Register ourselves with the PApplet to be drawn every frame.
+         * Register ourselves with the PApplet to be drawn every frame.
 		 */
         p.registerDraw(this);
     }

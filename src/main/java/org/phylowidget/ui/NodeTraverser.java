@@ -92,7 +92,7 @@ public class NodeTraverser extends AbstractUIObject implements TweenListener, Ke
 
     public synchronized void draw() {
         /*
-		 * Update the glowing circle's radius.
+         * Update the glowing circle's radius.
 		 */
         if (isGlowing && glow) {
             glowTween.update();

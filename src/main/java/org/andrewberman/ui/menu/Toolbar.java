@@ -70,7 +70,7 @@ public class Toolbar extends Menu {
     public void setOptions() {
         super.setOptions();
         /*
-		 * Override some default options from the Menu class.
+         * Override some default options from the Menu class.
 		 */
         useCameraCoordinates = true;
         clickToggles = true;

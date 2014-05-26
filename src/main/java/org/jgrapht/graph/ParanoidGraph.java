@@ -96,7 +96,8 @@ public class ParanoidGraph<V, E>
                                 + "o1 (hashCode=" + o.hashCode()
                                 + ") and o2 (hashCode=" + t.hashCode()
                                 + ") where o1.equals(o2) "
-                                + "but o1.hashCode() != o2.hashCode()");
+                                + "but o1.hashCode() != o2.hashCode()"
+                );
             }
         }
     }

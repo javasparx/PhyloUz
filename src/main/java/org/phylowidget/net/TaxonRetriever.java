@@ -43,7 +43,7 @@ public class TaxonRetriever {
             in.close();
 
 			/*
-			 * Now, we parse the html and return the string array.
+             * Now, we parse the html and return the string array.
 			 */
             Matcher m = taxonPattern.matcher(dest);
             ArrayList<String> strings = new ArrayList<String>();

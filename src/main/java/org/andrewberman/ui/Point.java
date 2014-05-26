@@ -31,9 +31,9 @@ import java.awt.geom.Point2D;
  * and <code>scale</code>.
  *
  * @author Greg
- * @see        java.awt.Point
- * @see        org.andrewberman.ui.UIUtils
- * @see        Color
+ * @see java.awt.Point
+ * @see org.andrewberman.ui.UIUtils
+ * @see Color
  */
 public final class Point extends Point2D.Float {
     private static final long serialVersionUID = 1L;

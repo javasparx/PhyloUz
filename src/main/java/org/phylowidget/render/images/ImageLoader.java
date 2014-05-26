@@ -37,7 +37,7 @@ public class ImageLoader implements Runnable {
             Image img = imageMap.get(imgS);
             if (img != null) {
                 /*
-				 * The latest image is here, so unload the old image from the hashtable and the annotation map.
+                 * The latest image is here, so unload the old image from the hashtable and the annotation map.
 				 */
                 String oldImgS = n.getAnnotation(ImageSearcher.OLD_IMG_TAG);
                 if (oldImgS != null) {

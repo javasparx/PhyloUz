@@ -67,7 +67,7 @@ public class DockItem extends MenuItem implements TweenListener {
 
         if (icon != null) {
             /*
-			 * Figure out the correctly scaled size of the icon.
+             * Figure out the correctly scaled size of the icon.
 			 */
             float pad = px;
             float effectiveW = width - pad * 2;

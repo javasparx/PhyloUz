@@ -79,7 +79,7 @@ public class MovableCamera extends Camera implements MouseWheelListener,
 
     public void scroll() {
         /*
-		 * Handle the edge scrolling.
+         * Handle the edge scrolling.
 		 */
         if (mouseInside && enableSideScrolling) {
             pt.setLocation(p.mouseX, p.mouseY);

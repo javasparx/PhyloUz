@@ -68,7 +68,7 @@ public class TreeManager extends AbstractUIObject {
         camera.zoomTo(PhyloWidget.cfg.viewportZoom);
         camera.fforward();
         /*
-		 * We need to let the ToolManager know our current Camera object.
+         * We need to let the ToolManager know our current Camera object.
 		 */
         UIGlobals.g.event().setCamera(camera);
 

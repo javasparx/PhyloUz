@@ -73,7 +73,7 @@ public class MenuUtils {
 
         roundRect.setRoundRect(x, y, width, height, ro, ro);
         /*
-		 * Draw the first gradient: a full-width gradient.
+         * Draw the first gradient: a full-width gradient.
 		 */
         buff.g2.setPaint(style.getGradient(MenuItem.UP, x, y, x + width, y));
         buff.g2.fill(roundRect);

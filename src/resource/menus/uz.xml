@@ -1,0 +1,95 @@
+<menuset name="PhyloUz Menus">
+    <menu type="Toolbar" fontSize="11" x="2" y="2">
+        <item name="Fayl">
+            <item name="Fasta fayl yuklash" action="fastaLoad" shortcut="control-n"/>
+            <item name="Yangi daraxt" action="treeNew" shortcut="control-n"/>
+            <item name="Daraxt yuklash" action="treeLoad"/>
+            <item name="Daraxtni saqlash" action="treeSave"/>
+            <item name="Rasmga eksport qilish">
+                <item name="Katta (1600x1200)" action="fileOutputBig"/>
+                <item name="Kichik (640 x 480)" action="fileOutputSmall"/>
+                <item name="PDF" action="fileOutputPDF"/>
+            </item>
+        </item>
+        <item name="Ko'rinish">
+            <item name="To'la ko'rinish" action="viewZoomToFull" shortcut="control-F"/>
+            <item name="Daraxt turi">
+                <item name="To'g'ri chiziqli" action="viewRectangular" shortcut="control-1"/>
+                <item name="Diagonal" action="viewDiagonal" shortcut="control-2"/>
+                <item name="Aylana" action="viewCircular" shortcut="control-3"/>
+            </item>
+            <item name="Sozlamalar">
+                <item name="Yozuv kattaligi" type="NumberScroller" property="textSize" increment=".02" min="0.05"
+                      max="2"/>
+                <item name="Yozuv burchagi" type="NumberScroller" property="textRotation" increment=".5" min="-45"
+                      max="45"/>
+                <item name="Tugun o'lchami" type="NumberScroller" property="nodeSize" increment="0.05" min="0"
+                      max="10"/>
+                <item name="Chiziq qalinligi" type="NumberScroller" property="lineSize" increment="0.05" min="0"
+                      max="10"/>
+            </item>
+            <item name="Ko'rinish Chegarasi" type="NumberScroller" property="renderThreshold" increment="5" min="5"
+                  max="1000"/>
+            <item name="Yozuv Min o'lchami " type="NumberScroller" property="minTextSize" increment=".1" min="0"
+                  max="36"/>
+            <item name="Daraxtni oynaga moslash" type="CheckBox" methodCall="setStretchToFit"/>
+            <item name="Shohlarni farqlash" type="CheckBox" methodCall="setUseBranchLengths" shortcut="ctrl-b"/>
+        </item>
+        <item name="Daraxt">
+            <!--<item name="Mutator (for fun!)">-->
+                <!--<item name="Mutate Once" action="treeMutateOnce" shortcut="control-m"/>-->
+                <!--<item name="Mutate Slow" action="treeMutateSlow"/>-->
+                <!--<item name="Mutate Fast" action="treeMutateFast"/>-->
+                <!--<item name="Stop Mutating" action="treeStopMutating" shortcut="control-shift-m"/>-->
+            <!--</item>-->
+            <item name="Yagona nomlash" type="CheckBox" methodCall="setEnforceUniqueLabels"/>
+            <item name="Akslantirish" action="treeFlip" shortcut="control-R"/>
+            <item name="Avtosaralash" action="treeAutoSort" shortcut="control-L"/>
+            <item name="Oraliq tugunni o'chirish" action="treeRemoveElbows" shortcut="control-E"/>
+        </item>
+        <item type="Spacer" spaceWidth="5"/>
+        <item type="org.phylowidget.ui.SearchBox" name="Qidiruv:" width="140"/>
+    </menu>
+
+    <!-- If you want the user to be able to interact with the tree AT ALL (including through the context menu),
+            then you must have a ToolDock with the associated tools. You can set the "hidden" attribute of the
+            ToolDock element to "True" if you want to have the tools but keep the dock hidden. -->
+    <menu name="dock" type="ToolDock" width="30" rotation="left" hidden="false">
+        <!-- the "rotation" parameter can have the values: left, right, top, bottom -->
+        <item name="Arrow" tool="Arrow" shortcut="a" icon="dock/arrow.png"/>
+        <item name="Scroll" tool="Scroll" shortcut="s" icon="dock/grab.png"/>
+        <item name="Zoom" tool="Zoom" shortcut="z" icon="dock/zoom.png"/>
+
+        <!-- Look at this nifty methodcall tag! Not worth the effort, you say? I probably agree. -->
+        <methodcall method="selectTool" param="Arrow"/>
+    </menu>
+
+    <menu name="context" type="org.phylowidget.ui.PhyloContextMenu">
+        <item name="Tree Edit" hint="t">
+            <item name="Add" hint="a">
+                <item name="Child" action="nodeAddChild" hint="c"/>
+                <item name="Sister" action="nodeAddSister" hint="s"/>
+            </item>
+            <item name="Delete" hint="d">
+                <item name="This node" action="nodeDelete" hint="t"/>
+                <item name="Subtree" action="nodeDeleteSubtree" hint="s"/>
+            </item>
+        </item>
+        <item name="Layout" hint="a">
+            <item name="Reroot" action="nodeReroot" hint="r"/>
+            <item name="Flip subtree" action="nodeFlipSubtree" hint="f"/>
+            <item name="Switch children" action="nodeSwitchChildren" hint="s"/>
+        </item>
+        <item name="Clipboard" hint="c">
+            <item name="Cut" action="nodeCut" hint="x"/>
+            <item name="Copy" action="nodeCopy" hint="c"/>
+            <item name="Paste" action="nodePaste" hint="v"/>
+            <item name="Swap" action="nodeSwap" hint="s"/>
+            <item name="Clear" action="nodeClearClipboard" hint="r"/>
+        </item>
+        <item name="Node Edit" hint="e">
+            <item name="Name" action="nodeEditName" hint="n"/>
+            <item name="Branch length" action="nodeEditBranchLength" hint="b"/>
+        </item>
+    </menu>
+</menuset>

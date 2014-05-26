@@ -103,7 +103,7 @@ public class AnnotationEditorDialog extends Dialog implements ActionListener,
 
     void cancelAnnotations() {
         /*
-		 * Do nothing. Just quit.
+         * Do nothing. Just quit.
 		 */
         setVisible(false);
     }

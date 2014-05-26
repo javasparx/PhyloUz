@@ -174,7 +174,7 @@ public class RadialMenuItem extends MenuItem {
 
     void drawShape() {
         /*
-		 * Draw the main wedge shape.
+         * Draw the main wedge shape.
 		 */
         Graphics2D g2 = menu.buff.g2;
         // this.isAncestorOf(menu.currentlyHovered);

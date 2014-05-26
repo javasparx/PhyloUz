@@ -33,7 +33,7 @@ public class LayoutDiagonal extends LayoutBase {
             // If N is a leaf, then it's already been laid out.
             return 0;
         /*
-		 * Do the children first.
+         * Do the children first.
 		 */
         List<PhyloNode> children = tree.getChildrenOf(n);
         for (int i = 0; i < children.size(); i++) {

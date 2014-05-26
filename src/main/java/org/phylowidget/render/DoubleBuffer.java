@@ -72,7 +72,7 @@ public class DoubleBuffer implements Runnable {
         if (offscreen == null || offscreen.getWidth() != canvas.width
                 || offscreen.getHeight() != canvas.height) {
             /*
-			 * We have to re-allocate the offscreen image.
+             * We have to re-allocate the offscreen image.
 			 */
             allocateBuffers(canvas);
         }

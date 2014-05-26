@@ -39,10 +39,10 @@ import java.awt.event.FocusListener;
  * <code>MenuItem</code> sources for "FocusManager."
  *
  * @author Greg
- * @see        org.andrewberman.ui.ifaces.UIObject
- * @see        EventManager
- * @see        org.andrewberman.ui.menu.MenuItem
- * @see        org.andrewberman.ui.menu.Menu
+ * @see org.andrewberman.ui.ifaces.UIObject
+ * @see EventManager
+ * @see org.andrewberman.ui.menu.MenuItem
+ * @see org.andrewberman.ui.menu.Menu
  */
 public class FocusManager implements FocusListener {
     private PApplet p;

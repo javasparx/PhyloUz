@@ -31,7 +31,7 @@ public class PhyloLinkItem extends RadialLinkItem {
 
     public String getAnnotationValue() {
         /*
-		 * Try and get the annotation for the current node.
+         * Try and get the annotation for the current node.
 		 */
         PhyloNode n = PhyloWidget.ui.getCurNode();
         if (n == null)

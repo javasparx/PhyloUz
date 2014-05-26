@@ -17,7 +17,7 @@ public class RadialLinkItem extends RadialMenuItem {
     protected void loadImage() {
         super.loadImage();
         /*
-		 * We do this to make sure a web link always has an icon.
+         * We do this to make sure a web link always has an icon.
 		 */
         if (icon == null)
             icon = menu.canvas.loadImage(genericIcon);

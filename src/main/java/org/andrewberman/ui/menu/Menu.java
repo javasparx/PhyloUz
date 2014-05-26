@@ -204,7 +204,7 @@ public abstract class Menu extends MenuItem implements UIObject {
      */
     protected boolean singletNavigation;
     /*
-	 * =============================== GENERAL OPTIONS FOR SUBCLASSES
+     * =============================== GENERAL OPTIONS FOR SUBCLASSES
 	 */
     /**
      * A very important option. If set to FALSE, then this <code>Menu</code>

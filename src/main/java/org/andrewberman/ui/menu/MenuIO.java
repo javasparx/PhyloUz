@@ -53,7 +53,7 @@ public class MenuIO {
         actionObjects = actionHolders;
         //		InputStream in = p.openStream(filename);
         /*
-		 * Search depth-first through the XML tree, adding the highest-level
+         * Search depth-first through the XML tree, adding the highest-level
 		 * menu elements we can find.
 		 */
         Stack s = new Stack();

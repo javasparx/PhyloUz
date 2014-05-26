@@ -182,8 +182,8 @@ public class PhyloUI implements Runnable {
                     in = p.createInput(path + "/" + menuFile);
                 }
             }
-			/*
-			 * If "in" is STILL null, then let's try just loading the string itself.
+            /*
+             * If "in" is STILL null, then let's try just loading the string itself.
 			 */
             if (in == null) {
                 r = new StringReader(menuFile);

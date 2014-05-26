@@ -625,7 +625,7 @@ public class RootedTree<V extends DefaultVertex, E extends DefaultWeightedEdge> 
         }
 
 		/*
-		 * The basic idea here is to go through the current subtree, and
+         * The basic idea here is to go through the current subtree, and
 		 * basically mirror the same actions in the new tree, creating vertices
 		 * and edges as needed.
 		 */

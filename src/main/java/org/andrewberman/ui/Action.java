@@ -65,7 +65,7 @@ public class Action {
         if (s != null && !s.equals("") && o != null) {
             try {
                 /*
-				 * Try to get the public method (inherited or otherwise).
+                 * Try to get the public method (inherited or otherwise).
 				 */
                 m = o.getClass().getMethod(s);
             } catch (Exception e) {

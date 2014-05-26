@@ -165,7 +165,7 @@ public class ImageExportDialog extends Dialog implements ActionListener {
         p.add(p2, c);
 
 		/*
-		 * Add the panel, and we're done!
+         * Add the panel, and we're done!
 		 */
         add(p);
         setSize(780, 425);

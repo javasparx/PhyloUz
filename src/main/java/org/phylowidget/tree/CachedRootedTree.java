@@ -78,7 +78,7 @@ public class CachedRootedTree<V extends CachedVertex, E extends DefaultWeightedE
         if (holdCalculations)
             return;
         /*
-		 * Everything should be able to be cached by first sweeping from root to
+         * Everything should be able to be cached by first sweeping from root to
 		 * leaves, then from leaves to root.
 		 */
 

@@ -135,7 +135,7 @@ public class TextField extends AbstractUIObject implements Malleable {
 
         if (UIUtils.isJava2D(canvas)) {
             /*
-			 * If the canvas is Java2D, we can draw directly to it.
+             * If the canvas is Java2D, we can draw directly to it.
 			 */
             pg = (PGraphicsJava2D) canvas.g;
             layout();

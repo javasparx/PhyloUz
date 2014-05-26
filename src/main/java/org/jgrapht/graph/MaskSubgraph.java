@@ -148,7 +148,8 @@ public class MaskSubgraph<V, E>
                     this.base.getAllEdges(
                             sourceVertex,
                             targetVertex),
-                    this.mask);
+                    this.mask
+            );
         }
 
         return edges;

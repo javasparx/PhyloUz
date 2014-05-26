@@ -89,7 +89,8 @@ public class Shortcut {
                 } catch (Exception e) {
                     throw new RuntimeException(
                             "Error parsing shortcut text. The offending token: "
-                                    + token);
+                                    + token
+                    );
                 }
             }
         }

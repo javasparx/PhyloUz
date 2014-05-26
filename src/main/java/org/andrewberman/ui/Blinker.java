@@ -26,7 +26,7 @@ import java.util.ArrayList;
  * TextField</code> class to draw the caret on the screen.
  *
  * @author Greg
- * @see        org.andrewberman.ui.TextField
+ * @see org.andrewberman.ui.TextField
  */
 public class Blinker extends Thread {
     public static Blinker instance;

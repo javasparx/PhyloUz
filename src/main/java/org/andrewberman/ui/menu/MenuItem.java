@@ -160,7 +160,7 @@ public abstract class MenuItem implements Positionable, Sizable, Malleable,
     public MenuItem add(MenuItem item) {
         items.add(item);
         /*
-		 * Add this item to the zSortedList and re-sort.
+         * Add this item to the zSortedList and re-sort.
 		 */
         zSortedItems.add(item);
         zSort();

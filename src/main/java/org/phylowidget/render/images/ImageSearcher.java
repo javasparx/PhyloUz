@@ -23,7 +23,7 @@ public class ImageSearcher implements UsefulConstants {
         this.node = n;
         results = new Vector<SingleResult>();
         /*
-		 * Fetch the first batch of results.
+         * Fetch the first batch of results.
 		 */
         pos = 0;
         fetchResults(0);

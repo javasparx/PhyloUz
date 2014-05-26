@@ -11,7 +11,7 @@ public class MethodAndFieldSetter {
         for (String f : fieldToVal.keySet()) {
             String v = fieldToVal.get(f);
             /*
-			 * Set the xxxx(String s) field.
+             * Set the xxxx(String s) field.
 			 */
             try {
                 setField(o, f, v);

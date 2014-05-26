@@ -428,7 +428,7 @@ public final class UIUtils {
      */
     public static void screenToModel(Rectangle2D.Float rect) {
         /*
-		 * Strategy: Go through all points in the rectangle, transforming each
+         * Strategy: Go through all points in the rectangle, transforming each
 		 * point into model coordinates. Then, find the smallest completely
 		 * bounding rectangle in model space. Not simple, but it should work.
 		 */

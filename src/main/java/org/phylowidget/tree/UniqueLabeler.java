@@ -37,7 +37,7 @@ public class UniqueLabeler {
         while (vertexLabels.containsKey(vertex.getLabel())) {
             String cur = vertex.getLabel();
             /*
-			 * Take the current label and increment the suffixed number.
+             * Take the current label and increment the suffixed number.
 			 */
             int i = cur.lastIndexOf(sep);
             if (i != -1) {

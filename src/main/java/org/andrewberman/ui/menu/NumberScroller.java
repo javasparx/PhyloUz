@@ -101,7 +101,7 @@ public class NumberScroller extends MenuItem {
          * For the height, let's use the height of some capital letters.
 		 */
         float tHeight = UIUtils.getTextHeight(menu.buff, font, fs, "XYZ", true);
-		/*
+        /*
 		 * Calculate the text rectangle size.
 		 */
         if (getName().length() > 0) {

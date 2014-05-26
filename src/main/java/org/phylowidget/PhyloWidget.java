@@ -24,7 +24,6 @@ import org.andrewberman.ui.unsorted.MethodAndFieldSetter;
 import org.andrewberman.ui.unsorted.StringPair;
 import org.phylowidget.net.PWClipUpdater;
 import org.phylowidget.net.PWTreeUpdater;
-import org.phylowidget.render.DoubleBuffer;
 import org.phylowidget.tree.RootedTree;
 import org.phylowidget.ui.PhyloConfig;
 import org.phylowidget.ui.PhyloUI;
@@ -65,21 +64,21 @@ public class PhyloWidget extends PApplet {
     public void setup() {
         if (frame != null) {
             /*
-			 * We're in standalone / application mode. FREEDOM!!!
+             * We're in standalone / application mode. FREEDOM!!!
 			 */
             frame.setResizable(true);
             frame.setTitle("PhyloUz by Javlon Eraliyev");
             SwingUtilities.invokeLater(new Runnable() {
                 public void run() {
-                    size(500, 500);
+                    size(600, 500);
                 }
             });
         } else {
-			/*
-			 * We're locked into an applet. Don't fight it.
+            /*
+             * We're locked into an applet. Don't fight it.
 			 */
             size(getWidth(), getHeight(), JAVA2D);
-//			size(getWidth(),getHeight(),P3D);
+//            size(getWidth(), getHeight(), P3D);
         }
         frameRate(FRAMERATE);
 
@@ -102,8 +101,6 @@ public class PhyloWidget extends PApplet {
 
         clearQueues();
     }
-
-    DoubleBuffer dbr;
 
     @Override
     public void resize(int width, int height) {

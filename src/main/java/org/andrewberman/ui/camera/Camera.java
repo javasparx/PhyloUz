@@ -66,7 +66,7 @@ public class Camera {
 
     protected void applyTransformations() {
         /*
-		 * Translate by half the stage width and height to re-center the stage
+         * Translate by half the stage width and height to re-center the stage
 		 * at (0,0).
 		 */
         p.translate(getStageWidth() / 2.0f, getStageHeight() / 2.0f);

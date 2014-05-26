@@ -80,7 +80,7 @@ public class ToolbarItem extends MenuItem {
          * Calculate the text rectangle size.
 		 */
         tWidth = UIUtils.getTextWidth(menu.canvas.g, font, fs, getName(), true);
-		/*
+        /*
 		 * For the height, let's use the height of some capital letters.
 		 */
         float tHeight = UIUtils.getTextHeight(menu.canvas.g, font, fs, "XYZ",

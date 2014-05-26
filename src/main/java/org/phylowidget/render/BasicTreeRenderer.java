@@ -259,7 +259,7 @@ public class BasicTreeRenderer extends DoubleBuffer implements TreeRenderer, Gra
         fforwardMe = false;
 
 		/*
-		 * THIRD LOOP: Drawing nodes
+         * THIRD LOOP: Drawing nodes
 		 *   - This loop actually does the drawing.
 		 */
         Thread.yield();
