@@ -23,7 +23,6 @@ import org.andrewberman.ui.Shortcut;
 import org.andrewberman.ui.UIGlobals;
 import org.andrewberman.ui.UIUtils;
 import org.andrewberman.ui.menu.ToolDock;
-import org.andrewberman.ui.menu.ToolDockItem;
 import processing.core.PApplet;
 
 import java.awt.event.FocusEvent;
@@ -146,7 +145,6 @@ public class ToolManager {
         }
         if (e.getID() != KeyEvent.KEY_PRESSED)
             return;
-        ToolDockItem activeItem = null;
         Set<String> set = tools.keySet();
         for (String toolS : set) {
             Tool t = tools.get(toolS);

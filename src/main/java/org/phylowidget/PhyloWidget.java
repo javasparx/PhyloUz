@@ -33,6 +33,7 @@ import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -148,18 +149,18 @@ public class PhyloWidget extends PApplet {
         while (!settingsAndMethods.isEmpty()) {
             StringPair sp = settingsAndMethods.remove(0); // Remove first.
             System.out.println(sp);
-            if (sp.a == METHOD_FLAG) {
+            if (sp.a.equals(METHOD_FLAG)) {
                 try {
                     String s = sp.b;
-                    Method m = null;
-                    Object[] args = new Object[]{};
+                    Method m;
+                    Object[] args;
                     Matcher match = parens.matcher(s);
                     boolean matched = false;
                     while (match.find()) {
                         matched = true;
                         s = match.group(1);
                         args = new Object[]{match.group(2)};
-                        System.out.println(s + "  " + args);
+                        System.out.println(s + "  " + Arrays.toString(args));
                         m = PhyloUI.class.getMethod(s, String.class);
                         m.invoke(ui, args);
                     }

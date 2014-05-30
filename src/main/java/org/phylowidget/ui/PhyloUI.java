@@ -37,6 +37,7 @@ import org.biojava3.phylo.ProgessListenerStub;
 import org.biojava3.phylo.TreeConstructionAlgorithm;
 import org.biojava3.phylo.TreeConstructor;
 import org.biojava3.phylo.TreeType;
+import org.forester.evoinference.matrix.distance.DistanceMatrix;
 import org.phylowidget.PhyloTree;
 import org.phylowidget.PhyloWidget;
 import org.phylowidget.net.NodeInfoUpdater;
@@ -56,6 +57,7 @@ import java.awt.event.WindowEvent;
 import java.io.*;
 import java.lang.reflect.Field;
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -216,12 +218,12 @@ public class PhyloUI implements Runnable {
     }
 
     public void loadFromApplet(PApplet app) throws Exception {
-		/*
-		 * Let's first load the URL query parameters.
+        /*
+         * Let's first load the URL query parameters.
 		 */
         //		System.out.println(app.getDocumentBase());
-		/*
-		 * The Javascript-defined parameters should take precedence, so now we'll load those up:
+        /*
+         * The Javascript-defined parameters should take precedence, so now we'll load those up:
 		 */
         HashMap<String, String> map = new HashMap<String, String>();
         Field[] fields = PhyloConfig.class.getDeclaredFields();
@@ -241,8 +243,8 @@ public class PhyloUI implements Runnable {
     }
 
     protected synchronized void configureMenus(ArrayList menus) {
-		/*
-		 * Some special handling of specific menus.
+        /*
+         * Some special handling of specific menus.
 		 */
         for (int i = 0; i < menus.size(); i++) {
             MenuItem menu = (MenuItem) menus.get(i);
@@ -490,7 +492,7 @@ public class PhyloUI implements Runnable {
     }
 
 	/*
-	 * View actions.
+     * View actions.
 	 */
 
     public void viewUnrooted() {
@@ -522,7 +524,7 @@ public class PhyloUI implements Runnable {
     }
 
 	/*
-	 * Tree Actions.
+     * Tree Actions.
 	 */
 
     public void treeNew() {
@@ -751,7 +753,7 @@ public class PhyloUI implements Runnable {
                 PhyloTree t = (PhyloTree) TreeIO.parseNewickString(new PhyloTree(), newick);
                 p.noLoop();
                 if (t != null) {
-                    PhyloWidget.trees.setTree(t);
+                    PhyloWidget.trees.setTree(t, treeConstructor.getDistanceMatrix());
                     setMessage("");
                 } else {
                     setMessage("Error loading tree!");
@@ -760,6 +762,31 @@ public class PhyloUI implements Runnable {
                 layout();
             }
         }.start();
+    }
+
+    public void showMatrix() {
+
+        DistanceMatrix matrix = PhyloWidget.trees.getDistanceMatrix();
+
+        if (matrix == null) {
+            JOptionPane.showMessageDialog(this.p, "Avvalo daraxt yasash kerak");
+            return;
+        }
+
+        JFrame window = new JFrame("Distance Matrix", p.getGraphicsConfiguration());
+
+
+        window.setLayout(new GridLayout(matrix.getSize(), matrix.getSize()));
+
+        for (int i = 0; i < matrix.getSize(); i++) {
+            for (int j = 0; j < matrix.getSize(); j++) {
+                window.add(new JLabel("" + new DecimalFormat("#.###").format(matrix.getValue(i, j))));
+            }
+        }
+
+        window.pack();
+        window.setVisible(true);
+
     }
 
     public Frame getFrame() {
@@ -832,7 +859,7 @@ public class PhyloUI implements Runnable {
     }
 
 	/*
-	 * File actions.
+     * File actions.
 	 */
 
     public void fileOutput() {

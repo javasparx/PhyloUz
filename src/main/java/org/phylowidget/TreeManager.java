@@ -22,6 +22,7 @@ import org.andrewberman.ui.AbstractUIObject;
 import org.andrewberman.ui.UIGlobals;
 import org.andrewberman.ui.UIRectangle;
 import org.andrewberman.ui.camera.RectMover;
+import org.forester.evoinference.matrix.distance.DistanceMatrix;
 import org.phylowidget.render.*;
 import org.phylowidget.render.images.ImageLoader;
 import org.phylowidget.tree.RootedTree;
@@ -43,6 +44,7 @@ public class TreeManager extends AbstractUIObject {
     public static ImageLoader imageLoader;
     TreeRenderer r;
     RootedTree t;
+    private DistanceMatrix distanceMatrix;
 
     // public Navigator nav;
     private RandomTreeMutator mutator;
@@ -175,10 +177,15 @@ public class TreeManager extends AbstractUIObject {
         setTree(TreeIO.parseNewickString(new PhyloTree(), s));
     }
 
+    public void setTree(final RootedTree tree, DistanceMatrix distanceMatrix) {
+        setTree(tree);
+        setDistanceMatrix(distanceMatrix);
+    }
+
     public void setTree(final RootedTree tree) {
         if (t != null) {
-			/*
-			 * Whenever doing something to the tree (such as DISPOSING it!) we need to lock
+            /*
+             * Whenever doing something to the tree (such as DISPOSING it!) we need to lock
 			 * on it, because the renderer (which is on a different thread) could be using it at the moment.
 			 */
             synchronized (t) {
@@ -187,6 +194,8 @@ public class TreeManager extends AbstractUIObject {
             }
         }
         this.t = tree;
+
+
         if (getRenderer() != null) {
             getRenderer().setTree(tree);
         }
@@ -196,6 +205,14 @@ public class TreeManager extends AbstractUIObject {
         }
         fforwardMe = true;
         mutator = new RandomTreeMutator(tree);
+    }
+
+    public DistanceMatrix getDistanceMatrix() {
+        return distanceMatrix;
+    }
+
+    public void setDistanceMatrix(DistanceMatrix distanceMatrix) {
+        this.distanceMatrix = distanceMatrix;
     }
 
     public synchronized void diagonalRender() {

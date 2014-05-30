@@ -37,10 +37,10 @@
         </item>
         <item name="Daraxt">
             <!--<item name="Mutator (for fun!)">-->
-                <!--<item name="Mutate Once" action="treeMutateOnce" shortcut="control-m"/>-->
-                <!--<item name="Mutate Slow" action="treeMutateSlow"/>-->
-                <!--<item name="Mutate Fast" action="treeMutateFast"/>-->
-                <!--<item name="Stop Mutating" action="treeStopMutating" shortcut="control-shift-m"/>-->
+            <!--<item name="Mutate Once" action="treeMutateOnce" shortcut="control-m"/>-->
+            <!--<item name="Mutate Slow" action="treeMutateSlow"/>-->
+            <!--<item name="Mutate Fast" action="treeMutateFast"/>-->
+            <!--<item name="Stop Mutating" action="treeStopMutating" shortcut="control-shift-m"/>-->
             <!--</item>-->
             <item name="Yagona nomlash" type="CheckBox" methodCall="setEnforceUniqueLabels"/>
             <item name="Akslantirish" action="treeFlip" shortcut="control-R"/>
@@ -62,6 +62,8 @@
 
         <!-- Look at this nifty methodcall tag! Not worth the effort, you say? I probably agree. -->
         <methodcall method="selectTool" param="Arrow"/>
+
+        <item name="Matrix" tool="Matrix" action="showMatrix" shortcut="m" icon="dock/matrix.png"/>
     </menu>
 
     <menu name="context" type="org.phylowidget.ui.PhyloContextMenu">

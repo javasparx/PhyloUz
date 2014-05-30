@@ -30,6 +30,7 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 
 public class Zoom extends Tool {
+
     Cursor zoomCursor;
 
     float targetX, targetY;
@@ -38,14 +39,11 @@ public class Zoom extends Tool {
 
     Tween zoomTween;
 
-    Robot r;
-
     public Zoom(PApplet p) {
         super(p);
 
         shortcut = new Shortcut("z");
-        zoomTween = new Tween(null, TweenFriction.tween(0.3f), Tween.OUT, 1, 1,
-                30);
+        zoomTween = new Tween(null, TweenFriction.tween(0.3f), Tween.OUT, 1, 1, 30);
     }
 
     public void draw() {
